@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import { Button } from 'antd';
 
 import "./App.css";
-import 'antd/dist/antd.css';
 import { incrementCount, decrementCount } from "./actions/exampleAction";
+import { P } from "./styledCSS/styles";
 
 class App extends Component {
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
           onClick={this.props.increment}
           type="primary"
         > + </Button>
-        <p> counter value is {this.props.counter}</p>
+        <P> counter value is {this.props.counter}</P>
         <Button
           type="primary"
           onClick={this.props.decrement}
