@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
+import { Button } from 'antd';
 
 import "./App.css";
+import 'antd/dist/antd.css';
 import { incrementCount, decrementCount } from "./actions/exampleAction";
 
 class App extends Component {
@@ -10,14 +12,16 @@ class App extends Component {
     return (
       <div className="App">
         <h1> Hello, World! </h1>
-        <button
+        <Button
           onClick={this.props.increment}
-        > + </button>
+          type="primary"
+        > + </Button>
         <p> counter value is {this.props.counter}</p>
-        <button
+        <Button
+          type="primary"
           onClick={this.props.decrement}
-        > - </button>
-      </div>
+        > - </Button>
+</div>
     );
   }
 }
