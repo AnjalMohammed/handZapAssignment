@@ -1,0 +1,40 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "react-redux-antd boiler plate",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode development",
+    "prodBuild": "webpack --mode production",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnjalMohammed/reactBoilerPlate.git"
+  },
+  "author": "AnjalMohammed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnjalMohammed/reactBoilerPlate/issues"
+  },
+  "homepage": "https://github.com/AnjalMohammed/reactBoilerPlate#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "react-hot-loader": "^4.3.12"
+  }
+}
