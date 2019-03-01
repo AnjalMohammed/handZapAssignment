@@ -1,25 +1,24 @@
 {
-  "name": "boilerplate",
+  "name": "handZapAssignment",
   "version": "1.0.0",
-  "description": "react-redux-antd boiler plate",
+  "description": "handZap assignment on FB APIs",
   "main": "index.js",
   "scripts": {
     "test": "npm test",
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode development",
-    "prodBuild": "webpack --mode production",
-    "eject": "react-scripts eject"
+    "prodBuild": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnjalMohammed/reactBoilerPlate.git"
+    "url": "git+https://github.com/AnjalMohammed/handZapAssignment.git"
   },
   "author": "AnjalMohammed",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AnjalMohammed/reactBoilerPlate/issues"
+    "url": "https://github.com/AnjalMohammed/handZapAssignment/issues"
   },
-  "homepage": "https://github.com/AnjalMohammed/reactBoilerPlate#readme",
+  "homepage": "https://github.com/AnjalMohammed/handZapAssignment#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
