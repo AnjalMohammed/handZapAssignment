@@ -1,5 +1,6 @@
 const initialState = {
     albums: [],
+    albumPhotos: [],
 };
 
 export const photoReducer = (state = initialState, action) => {
@@ -10,6 +11,10 @@ export const photoReducer = (state = initialState, action) => {
                 albums: action.payload,
             });
 
+        case 'SET_PHOTO_DATA':
+            return Object.assign({}, state, {
+                albumPhotos: action.payload,
+            });
 
         default: return state;
     }

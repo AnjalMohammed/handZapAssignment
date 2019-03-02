@@ -34,7 +34,13 @@ export const AlbumItemContainer = styled.div`
 
 export const ClickableText = styled.p`
 	:hover{
-		color: orange;
-		cursor: pointer;
+		color: ${props => props.clickability ? 'orange' : 'default'};
+		cursor: ${props => props.clickability ? 'pointer' : 'default'};
 	}
+`;
+
+export const ProfileImage = styled.img`
+	height: 60px;
+	width: 60px;
+	background-color: lightgrey;
 `;

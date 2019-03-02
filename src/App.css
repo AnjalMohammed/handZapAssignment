@@ -1,8 +1,11 @@
 @import '~antd/dist/antd.css';
 @import "./styledCSS/utilities.less";
 
+body{
+  background-color: #f0f2f5;
+}
 
 .App {
-    height: 100vh;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
   }

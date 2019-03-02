@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import Moment from 'moment';
 
-import { AlbumListContainer, AlbumItemContainer, ClickableText } from '../../styledCSS/styles';
+import { AlbumListContainer, AlbumItemContainer } from '../../styledCSS/styles';
+import DetailList from '../../Components/DetailList/DetailList';
 
 const AlbumPage = props => {
 
     const routeToPictures = (albumId) => {
-        props.history.push(`/${albumId}/pictures`)
+        props.history.push(`/albums/${albumId}/pictures`)
     }
 
     return (
@@ -25,21 +25,11 @@ const AlbumPage = props => {
                 </AlbumItemContainer>
             </AlbumListContainer>
 
-            {
-                props.albums.map(albumDetails => {
-                    const date=Moment(new Date(albumDetails.created_time)).format('Do MMM,YYYY');
-                    return (
-                        <AlbumListContainer key={albumDetails.id}>
-                            <AlbumItemContainer >
-                                <ClickableText onClick={() => routeToPictures(albumDetails.id)} className="m0">{albumDetails.name}</ClickableText>
-                            </AlbumItemContainer>
-                            <AlbumItemContainer >
-                                <p className="m0">{date}</p>
-                            </AlbumItemContainer>
-                        </AlbumListContainer>
-                    )
-                })
-            }
+            <DetailList
+                clickable={true}
+                handleOnClick={id => routeToPictures(id)}
+                listContent={props.albums}
+            />
         </div>
     )
 }

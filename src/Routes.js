@@ -5,12 +5,10 @@ import { Switch, Route } from 'react-router-dom';
 import { Wrapper, Spinner } from './styledCSS/styles';
 
 
-// const Login = Loadable({
-//     loader: () => import('./Scenes/Login/Login'),
-//     loading: () => <Wrapper>
-//         <Spinner />
-//     </Wrapper>,
-// });
+const PhotoPage = Loadable({
+    loader: () => import('./Scenes/PhotoPage/PhotoPage'),
+    loading: () => <Wrapper><Spinner /></Wrapper>,
+});
 
 const AlbumPage = Loadable({
     loader: () => import('./Scenes/AlbumPage/AlbumPage'),
@@ -20,6 +18,7 @@ const AlbumPage = Loadable({
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={AlbumPage} />
+        <Route exact path="/albums/:albumId/pictures" component={PhotoPage} />
     </Switch>
 );
 
